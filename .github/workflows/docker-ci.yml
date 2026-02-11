@@ -21,14 +21,13 @@ jobs:
         with:
           python-version: '3.11'
 
-      # 3️⃣ Instalar dependencias
+      # 3️⃣ Instalar pytest y coverage
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
           pip install pytest pytest-cov
 
-      # 4️⃣ Ejecutar pruebas unitarias con cobertura
+      # 4️⃣ Ejecutar pruebas con métricas
       - name: Run unit tests with coverage
         run: |
           pytest --cov=. --cov-report=term --cov-report=xml
