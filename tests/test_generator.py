@@ -1,7 +1,6 @@
 import sys
 import os
 
-# Agregar la carpeta raíz al path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from generator import generate_name

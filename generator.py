@@ -1,6 +1,6 @@
-from generator import generate_name
+import random
 
-def test_generate_name_returns_string():
-    name = generate_name()
-    assert isinstance(name, str)
-    assert len(name) > 0
+def generate_name():
+    prefixes = ["Dark", "Fire", "Ice", "Shadow"]
+    suffixes = ["blade", "storm", "fang", "heart"]
+    return random.choice(prefixes) + random.choice(suffixes)
