@@ -42,3 +42,5 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           docker push ${{ vars.DOCKER_USERNAME }}/rpg-name-generator
+
+          
